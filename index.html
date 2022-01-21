@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="user_input w-25 m-auto my-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1>Counter</h1>
+                        </div>
+                        <div class="card-body">
+                            <form action="" class="userall">
+                                <input class="form-control" type="date"  id="user_date">
+                                <input class="form-control my-3" type="time"  id="user_time">
+                                <button type="submit" class="btn btn-outline-success form-control">Create an order</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 my-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="countdown_clock fs-2 fw-bold">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="todo_list w-50 my-5 m-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1>TO DO LIST</h1>
+                        </div>
+                        <div class="card-body">
+                            <form  action="" id="todo">
+                                <input class="form-control" type="text" name="" id="do_name">
+                                <select class="form-select my-3" name="" id="priority">
+                                    <option value="">-- select --</option>
+                                    <option value="Important">Important</option>
+                                    <option value="Non Important">Non Important</option>
+                                    <option value="Useful">Useful</option>
+                                    <option value="unnacessary">unnecessary</option>
+                                    <input type="submit" class="btn btn-primary" value="Add">
+                                </select>
+                            </form>
+                            <hr>
+                            <ul class="list-group m_list">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./function.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
