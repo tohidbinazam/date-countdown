@@ -87,3 +87,54 @@ todo.addEventListener('submit', function(e){
 
 })
 
+
+const form = document.getElementById('agcal_form');
+const all_data = document.querySelector('.all_data');
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    let name = this.querySelector('input[name="name"]').value;
+    let bir_date = this.querySelector('input[name="date"]').value;
+    let bir_time = this.querySelector('input[name="time"]').value;
+
+    setInterval(() =>{
+      let now = new Date();
+      let bir_date_time = new Date(bir_date + ' ' + bir_time);
+
+      let diff = now.getTime() - bir_date_time.getTime();
+
+      let seconds = Math.floor(diff / 1000);
+      let minutes = Math.floor(seconds / 60);
+      let hours = Math.floor(minutes / 60);
+      let day = Math.floor(hours / 24);
+      let Week = Math.floor(day / 7);
+      let months = Math.floor(Week / 4);
+      let year = Math.floor(months / 12);
+
+      
+      let mo = months - (year * 12);
+      let we = Week - (months * 4);
+      let da = day - (Week * 7);
+      let ho = hours - (day * 24);
+      let min = minutes - (hours * 60);
+      let sec = seconds - (minutes * 60);
+      let s_mili = diff - (seconds * 1000);
+
+      all_data.innerHTML = `<h5>${diff} Milliseconds</h5>
+      <h5>${seconds} Seconds</h5>
+      <h5>${minutes} Minutes</h5>
+      <h5>${hours} Hours</h5>
+      <h5>${day} Days</h5>
+      <h5>${Week} Weeks</h5>
+      <h5>${months} months</h5>
+      <h5>${year} years</h5>
+      <hr>
+      <h5 class ='text-danger'>Hi ${name}, now your age is <b class='text-dark'>${year}</b> Years, <b class='text-dark'>${mo}</b> Months, <b class='text-dark'>${we}</b> Weeks, <b class='text-dark'>${da}</b> Days, <b class='text-dark'>${ho}</b> Hours, <b class='text-dark'>${min}</b> Minutes, <b class='text-dark'>${sec}</b> Seconds, <b class='text-dark'>${s_mili}</b> Milliseconds</h5>`
+    }, 1000)
+    
+    
+})
+
+
+
